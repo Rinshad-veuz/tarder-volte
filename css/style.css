@@ -433,7 +433,7 @@ a {
 
 .product-sec .product-cont .product-img {
 	overflow: hidden;
-	/* border-radius: 40px; */
+	border-radius: 15px;
 }
 
 .product-sec .product-cont .product-img img {
