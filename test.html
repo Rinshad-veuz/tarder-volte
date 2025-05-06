@@ -1,0 +1,913 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+ </head>
+
+ <style>
+    :root {
+    --font-color: #fff;
+    --f-hover-color: #00B300;
+    --sec-head: #282a39;
+    --card-1: #0b131d;
+    --card-2: #0f1822;
+    --border-color:#ebebeb;
+    --footer-text:#41434f;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: "Sora", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: black;
+
+}
+
+
+.nav-align.scrolled {
+    transition: all 0.5s ease-out;
+    background: black;
+    opacity: 0.9;
+    
+}
+
+.nav-align img {
+    width: 180px;
+    margin-left: 65px;
+}
+
+.nav-txt {
+    color: var(--font-color) !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+}
+
+.nav-txt:hover {
+    color: var(--f-hover-color) !important;
+}
+
+.nav-button {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: transparent !important;
+    font-size: 14px !important;
+
+}
+
+.nav-button:hover {
+    border: solid var(--f-hover-color) !important;
+    background-color: var(--f-hover-color) !important;
+}
+
+.nav-align ul {
+
+    gap: 15px;
+}
+
+.hide {
+    display: none !important
+}
+
+.nv-bt-spn {
+    display: flex !important;
+    align-items: center;
+    gap: 2px;
+}
+
+.dropdown-menu {
+    background-color: black !important;
+
+}
+
+.bg-video {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.bg-video::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(0 0 0 / 0%) 0%, rgb(0, 0, 0) 81.49999976158142%, rgb(0, 0, 0) 0%);
+}
+
+.bg-video img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.banner-cntnts {
+    position: absolute;
+    top: 40%;
+}
+
+.bg-video h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.btn {
+    width: 170px;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: transparent !important;
+    font-size: 14px !important;
+}
+
+.btn:hover {
+    border: solid var(--f-hover-color) !important;
+    background-color: var(--f-hover-color) !important;
+}
+
+.btn-arrow {
+    position: relative;
+
+}
+
+.btn-arrow span {
+    display: inline-block;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+}
+
+.btn-arrow:hover span {
+    transform: translate3d(-1rem, 0, 0);
+}
+
+.btn-arrow .fas {
+    position: absolute;
+    width: 1.1em;
+    right: 0px;
+    right: 0rem;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease-out;
+    will-change: right, opacity;
+}
+
+.dropdown-item {
+    background-color: black !important;
+    color: var(--font-color) !important;
+}
+
+.dropdown-item:hover {
+    color: #28a745 !important;
+    text-decoration: none !important;
+    background-color: black !important;
+}
+
+.btn-arrow .fas * {
+    stroke-width: 5;
+    border-color: var(--f-hover-color);
+}
+
+.btn-arrow:hover .fas {
+    opacity: 1;
+    right: -2rem;
+}
+
+.banner-btn {
+    gap: 10px;
+}
+
+.developers-txt{
+    height: 100%;
+}
+.developers-txt h2 {
+    color: var(--sec-head);
+    font-size: 40px;
+}
+
+.developers-txt h2 span {
+    color: var(--f-hover-color);
+}
+
+.developers-p {
+    font-size: 15px;
+}
+
+.developers-sec {
+    margin-top: 70px;
+}
+
+.verticle-line {
+    border-right: 1px solid #ebebeb;
+    height: 210px;
+}
+
+.group-img {
+    margin-top: 70px !important;
+}
+
+.partners-bg-img {
+    background-image: url(../img/parners-bg.png) !important;
+    width: 100%;
+    background-size: cover;
+    
+    margin-top: 70px;
+}
+.bg-img-content{
+    padding: 70px;
+}
+
+.partners-bg-sec h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--font-color);
+}
+
+.partners-bg-sec p {
+    font-size: 15px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.partner-card {
+    background-color: var(--card-1);
+    height: 180px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.partner-card2 img {
+    height: auto;
+    width: 187px;
+
+
+}
+
+.partner-card h4 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--font-color);
+}
+
+.partner-card2 h4 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--font-color);
+}
+
+.partner-card img {
+    height: auto;
+    width: 187px;
+
+
+}
+
+.partner-card2 {
+    background-color: var(--card-2);
+    height: 180px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-item {
+    transition: 0.3s;
+}
+
+.hover-item:hover {
+    transform: translate(0, -10px);
+}
+
+.p-card-sec {
+    margin-top: 40px;
+}
+
+.cound-head {
+    margin-top: 40px;
+}
+
+.hover-item a {
+    text-decoration: none !important;
+}
+
+.cound-head h3 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--font-color);
+    margin-top: 50px;
+}
+
+.cound-head p {
+    font-size: 15px;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.statistic-section {
+    padding-top: 45px;
+
+}
+
+.count-title {
+    text-align: center;
+    color: var(--f-hover-color);
+    font-weight: 700;
+    font-size: 51px;
+}
+
+.stats-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #a1aac9;
+}
+
+.count-number2 {
+    position: relative;
+}
+
+.count-number2::after {
+    position: absolute;
+    content: "+";
+    top: 0px;
+    right: auto;
+    font-size: 50px;
+    color: #00B300;
+}
+
+@media (max-width: 992px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+.person-img {
+    position: relative;
+    height: 100%;
+}
+
+.person-img img {
+    position: absolute;
+    height: auto;
+    width: 500px;
+    bottom: 0;
+}
+
+.person-sec {
+    background-color: var(--card-2);
+    border-radius: 30px;
+    height: 350px;
+    width: 100%;
+}
+
+.p-sec {
+    margin-top: 70px;
+}
+
+.p-symbol img {
+    width: 49px;
+}
+.p-symbol{
+    padding: 80px 65px 80px 0px;
+}
+
+.p-sec p{
+    color: #a1aac9;
+    font-size: 15px;
+}
+.p-sec h4 {
+    font-size: 16px;
+    color: var(--font-color);
+    margin-top: 20px;
+}
+.p-sec h5{
+    font-size:13px ;
+    color:#a1aac9 ;
+}
+.footer-sec{
+    margin-top: 70px;
+}
+.footer-img img{
+    width: 210px;
+    height: auto;
+}
+.footer-img p{
+    font-size: 15px;
+    color: #666;
+    margin-top: 20px;
+}
+.footer-line{
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+
+}
+
+.footer-line ul {
+    list-style-type: none;
+    padding-left: 50px;
+}
+.footer-line ul li h4{
+    font-size: 19px;
+    color: var(--footer-text);
+}
+.footer-line ul a{
+    text-decoration: none !important;
+}
+.footer-line ul a li {
+    font-size: 15px;
+    color:#666;
+    margin: 10px 0px;
+}
+.footer-line ul a li:hover {
+    color:var(--f-hover-color);
+   
+}
+.footer-line2 ul a li {
+    font-size: 15px;
+    color:#666;
+    margin: 10px 0px;
+}
+.footer-line2 ul li img{
+    width: 18px;
+    height: auto;
+}
+.footer-line2 ul {
+    list-style-type: none;
+    padding-left: 50px;
+}
+.footer-line2 ul li h4{
+    font-size: 19px;
+    color: var(--footer-text);
+}
+.footer-line2 ul a{
+    text-decoration: none !important;
+}
+.footer-line2 ul a li {
+    font-size: 15px;
+    color:#666;
+    margin: 10px 0px;
+}
+.footer-line2 ul a li:hover {
+    color:var(--f-hover-color);
+   
+}
+
+.footer-hr hr{
+    border: 1px solid !important;
+    color: #cbcaca;
+}
+.copyright-sec h4{
+    font-size: 16px;
+    color: var(--footer-text);
+}
+.copyright-sec{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: center;
+}
+.p-symbol {
+    padding: 80px 35px 80px 65px;
+}
+.navbar-toggler {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    flex-shrink: 0;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler {
+     padding:0px !important; 
+}
+  
+
+#button {
+    display: inline-block;
+    background-color: var(--f-hover-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+    
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color:var(--f-hover-color);
+  }
+  #button:active {
+    background-color: var(--f-hover-color);
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+    text-decoration: none;
+  }
+  
+  /* Styles for the content section */
+  
+  .content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+  }
+
+  .content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+  }
+  .content h3 {
+    font-style: italic;
+    color: #96a2a7;
+  }
+
+
+@media only screen and (max-width:1280px) {
+  
+    .person-img img {
+        bottom: 20px;
+    }
+    .bg-video {
+        position: relative;
+        height: 40vh;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1024px) {
+    
+   
+    .person-img img {
+        bottom: 3px;
+    }
+    .p-symbol img {
+        width: 40px;
+    }
+    .p-symbol {
+        padding: 65px 65px 65px 65px;
+    }  
+    .nav-align img {
+        margin-left: 45px;
+    }
+}
+@media only screen and (max-width:992px) {
+    
+    .navbar-collapse.collapse:not(.show) {
+        display: block;
+      }
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background:#000000;
+        width: 215px;
+        height: 100%;
+        z-index: 9999;
+        padding: 25px;
+        transform: translateX(-215px);
+        transition: 0.5s ease-in-out;
+        display: block;
+      }
+      .navbar-collapse.show {
+        transform: translateX(0px);
+      }
+      .nav-overlay {
+        position: absolute;
+        background: #0000007d;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transform: translateX(-100vw);
+        transition: 0.5s ease-in-out;
+        display: block;
+      }
+      .nav-overlay.active {
+        transform: translateX(0);
+      }
+    .banner-cntnts {
+        top: 35%;
+    }   
+    .bg-video {
+        position: relative;
+        height: 45vh;
+        width: 100%;
+    }  
+    .bg-video h1 {
+        font-size: 45px;
+    }
+    .developers-txt h2 {
+        font-size: 37px;
+    }
+    .developers-p {
+        font-size: 13px;
+    }
+    .partners-bg-sec h2 {
+        font-size: 37px;
+       
+    }
+    .partners-bg-sec p {
+        font-size: 13px;
+    }
+    .partner-card img {
+        width: 165px;
+    }
+    .partner-card2 img {
+        width: 165px;
+    }
+    .partner-card h4 {
+        margin-top: 60px;
+        font-size: 15px;
+    }
+    .partner-card2 h4 {
+        margin-top: 60px;
+        font-size: 15px;
+    }
+    .cound-head h3 {
+        font-size: 37px;
+    }
+    .cound-head p {
+        font-size: 13px;
+    }
+    .person-img img {
+        width: 340px;
+        bottom: -9px;
+    }
+    .p-sec p {
+        font-size: 14px;
+    }
+    .p-symbol {
+        padding: 25px 25px 25px 25px;
+    }
+    .copyright-sec {
+        height: 70px;
+    }
+    .footer-img img {
+        width: 190px;
+        height: auto;
+    }
+    .footer-img p {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .footer-line ul li h4 {
+        font-size: 17px;
+    }
+    .footer-line ul a li {
+        font-size: 14px;
+    }
+    .footer-line2 ul li h4 {
+        font-size: 17px;
+    }
+    .footer-line2 ul a li {
+        font-size: 14px;
+    }
+    .footer-line ul {
+        list-style-type: none;
+        padding-left: 25px;
+    }
+    .footer-line2 ul {
+        list-style-type: none;
+        padding-left: 25px;
+    }
+    .person-sec {
+        height: 275px;
+    }
+
+ 
+}
+@media only screen and (max-width:768px) {
+    .nav-align img {
+        margin-left: 0px;
+    }   
+    .person-img{
+        display: flex;
+        justify-content: center;
+    }
+    .person-img img {
+            width: 340px;
+            top: 85px;
+          
+        }
+        .footer-line {
+            border-left: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+        }
+        .verticle-line {
+            border-right: 1px solid #ffffff;
+            height: 100%;
+        }
+        .footer-line ul li h4 {
+            text-align: center;
+        }
+        .footer-line ul li{
+            text-align: center;
+
+        }
+        .footer-line2 ul li h4 {
+            text-align: center;
+        }
+        .footer-line2 ul li{
+            text-align: center;
+
+        }
+        .foot-logo-img{
+            display: flex;
+            justify-content: center;
+        }
+        .footer-img p {
+            text-align: center;
+        }
+        .bg-img-content {
+            padding: 40px;
+        }
+        .developers-sec {
+            margin-top: 40px;
+        }
+        .developers-p {
+            margin-top: 20px !important;
+        }
+        .partners-bg-sec h2 {
+            margin-top: 0px;
+        }
+        .person-sec {
+            position: relative;
+            bottom: 50px;
+            height: 480px;
+        }
+        .footer-img p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .bg-video h1 {
+            font-size: 30px;
+        }
+        .btn {
+            width: 160px;
+        }
+        .footer-line ul {
+            padding-left: 0;
+        }
+        .footer-line2 ul {
+            padding-left: 0;
+        }
+}
+
+@media only screen and (max-width:600px) {
+    .person-img img {
+        width: 280px;
+        top: 156px;
+    }
+.bg-video h1 {
+    font-size: 25px;
+}
+.btn {
+    width: 141px;
+    font-size: 13px !important;
+}
+.bg-video {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+.banner-cntnts{
+    top: 40%;
+}
+.nav-align img {
+    width: 150px;
+}
+
+}
+@media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
+ </style>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-dark nav-align fixed-top nav-clr">
+        <div class="container-fluid">
+          <a href="#"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="nav-overlay"></div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  navbar-nav-scroll nav-txt mx-auto mb-2 me-auto">
+              <li class="nav-item nav-txt ">
+                  <a class="nav-link active nav-txt" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-txt" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle nav-txt" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">  
+                      Subsidiaries
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-txt" href="#" tabindex="-1" aria-disabled="true">Career</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link nav-txt" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+            <div class=" mt-0">
+              <a href="#" class="btn btn-color btn-arrow" role="button">
+                  <span>Connect with us
+                      <i class="fas fa-arrow-right-long"></i>
+                  </span>
+              </a>
+    
+          </div>
+          </div>
+        </div>
+      </nav> 
+      
+      <script src="js/aos.js"></script>
+      <script src="js/gsap.min.js"></script>
+      <script src="js/lenis.min.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/font-awsome.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/ScrollTrigger.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+        $(document).ready(function () {
+           const button = document.querySelector(".navbar-toggler");
+           const navOverlay = document.querySelector(".nav-overlay");
+           const navbarCollapse = document.querySelector(".navbar-collapse");
+    
+           button.addEventListener("click", function () {
+             navOverlay.classList.toggle("active");
+           });
+    
+           navOverlay.addEventListener("click", function (event) {
+             if (event.target === navOverlay) {
+               navOverlay.classList.remove("active");
+               navbarCollapse.classList.remove("show");
+             }
+           });
+         });
+     </script>
+ </body>
+ </html>  
