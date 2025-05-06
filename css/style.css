@@ -640,6 +640,134 @@ right: -18px;
 	color: #2c2c2c;
 }
 
+
+/* about page start */
+
+
+.secondary-banner {
+	height: 400px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0 0 50px 50px;
+	background-image: url(../img/banner2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-blend-mode: overlay;
+	background-color: #000000cf;
+}
+
+.secondary-banner-cont {
+	margin-top: 50px;
+}
+
+.secondary-banner-cont h2 {
+	color: #fff;
+	font-size: 42px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.page-name {
+	text-align: center;
+}
+
+.secondary-banner-cont a {
+	color: #ffff;
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.secondary-banner-cont .active {
+	color: #C9982C;
+}
+
+.secondary-banner-cont span {
+	color: #C9982C;
+}
+
+.secondary-banner-cont p {
+	color: #ffff;
+	font-size: 20px;
+	margin-top: 10px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.about-img img {
+	width: 100%;
+	/* height: 500px; */
+	object-fit: contain;
+	border-radius: 20px;
+}
+
+.abt-title {
+	font-size: 50px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.owl-carousel {
+	overflow: hidden;
+}
+
+.history-carousel {
+	margin-top: 30px;
+}
+
+.history-carousel .client-card img {
+	width: 150px !important;
+}
+
+.about-sec {
+	margin-top: 30px !important;
+}
+
+.launch-bg{
+	background-image: url(../img/detail-page/abt2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: calc();
+	padding: 80px 0;
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+	background-color: #0e0e0ed8;
+}
+.launch-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 60px;
+	text-align: center;
+	border-radius:
+		25px 10px 10px 10px;
+	border:
+		2px solid rgba(255, 255, 255, 0.05);
+	background:
+		linear-gradient(150deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+	backdrop-filter: blur(10px);
+	height: 100%;
+}
+.launch-card h3{
+	color: #fff;
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.launch-card p{
+	color: #fff;
+}
+
+.launch-card img {
+	width: 130px;
+}
+
+/* about page end */
 /* footer */
 @media screen and (max-width:1800px) {
 	.custom-container {
@@ -693,12 +821,14 @@ right: -18px;
 	.product-cont h4 {
 		font-size: 32px;
 	}
-	.news-carousel .news-slider-cont h5{
+
+	.news-carousel .news-slider-cont h5 {
 		font-size: 15px;
 	}
+
 	.news-carousel .client-card img {
 		height: 170px;
-	  }
+	}
 }
 
 @media screen and (max-width:1200px) {
@@ -760,16 +890,27 @@ right: -18px;
 	.veiw-btn {
 		font-size: 15px;
 	}
+
 	.cta-cont h2 {
 		font-size: 34px;
-	  }
-	  .secodary-btn {
-		padding:15px 25px;
+	}
+
+	.secodary-btn {
+		padding: 15px 25px;
 		font-size: 16px;
-	  }
-	  .custom-container {
+	}
+
+	.custom-container {
 		max-width: 970px;
-	  }
+	}
+
+	.secondary-banner-cont h2 {
+		font-size: 36px;
+	}
+
+	.secondary-banner-cont p {
+		font-size: 18px;
+	}
 }
 
 @media screen and (max-width:1024px) {
@@ -784,12 +925,13 @@ right: -18px;
 	}
 
 	.custom-nav .navbar-nav {
-		gap:5px;
-		margin:0 !important;
+		gap: 5px;
+		margin: 0 !important;
 	}
+
 	.footer-logo img {
 		width: 200px;
-	  }
+	}
 }
 
 @media screen and (max-width:992px) {
@@ -844,36 +986,51 @@ right: -18px;
 	.product-cont h4 {
 		font-size: 26px;
 	}
+
 	.product-sec {
 		margin-top: 30px !important;
-	  }
-	  .news-carousel {
+	}
+
+	.news-carousel {
 		margin-top: 30px;
-	  }
-	  .cta-cont h2 {
+	}
+
+	.cta-cont h2 {
 		font-size: 28px;
-	  }
-	  .cta-cont h6 {
+	}
+
+	.cta-cont h6 {
 		font-size: 14px;
-	  }
-	  .secodary-btn {
+	}
+
+	.secodary-btn {
 		font-size: 15px;
-	  }
-	  .cta-cont h2 br{
+	}
+
+	.cta-cont h2 br {
 		display: none;
-	  }
-	  .cta-box {
-		padding:40px 35px;
-	  }
-	  .custom-container {
+	}
+
+	.cta-box {
+		padding: 40px 35px;
+	}
+
+	.custom-container {
 		max-width: 740px;
-	  }
-	  .footer-list{
+	}
+
+	.footer-list {
 		margin-bottom: 20px;
-	  }
-	  .common-space {
+	}
+
+	.common-space {
 		padding-bottom: 70px;
-	  }
+	}
+
+	.secondary-banner {
+		height: 350px;
+
+	}
 }
 
 @media screen and (max-width:768px) {
@@ -931,43 +1088,53 @@ right: -18px;
 	.product-cont h4 {
 		font-size: 22px;
 	}
+
 	.product-sec {
 		margin-top: 20px !important;
-	  }
-	  .news-carousel {
+	}
+
+	.news-carousel {
 		margin-top: 20px;
-	  }
-	  .news-carousel .owl-item {
-		padding:0 5px;
-	  }
-	  .cta-box {
-		padding:40px 35px;
+	}
+
+	.news-carousel .owl-item {
+		padding: 0 5px;
+	}
+
+	.cta-box {
+		padding: 40px 35px;
 		flex-direction: column;
 		text-align: center !important;
-		gap:10px;
-	  }
-	  .secodary-btn {
+		gap: 10px;
+	}
+
+	.secodary-btn {
 		font-size: 14px;
-		padding:15px;
-	  }
-	  .custom-container {
+		padding: 15px;
+	}
+
+	.custom-container {
 		max-width: 560px;
-	  }
-	  .social-links li img {
+	}
+
+	.social-links li img {
 		width: 35px;
-	  }
-	  .footer-list h4 {
+	}
+
+	.footer-list h4 {
 		font-size: 17px;
 		margin-bottom: 10px;
-	  }
-	  .copy-right-sec {
-		padding:10px 0;
+	}
+
+	.copy-right-sec {
+		padding: 10px 0;
 		flex-direction: column;
-		gap:10px;
-	  }
-	  .common-space {
+		gap: 10px;
+	}
+
+	.common-space {
 		padding-bottom: 50px;
-	  }
+	}
 }
 
 @media screen and (max-width:600px) {
@@ -1016,18 +1183,22 @@ right: -18px;
 	.service-head {
 		font-size: 32px;
 	}
+
 	.cta-cont h2 {
 		font-size: 24px;
-	  }
-	  .footer-logo img {
+	}
+
+	.footer-logo img {
 		width: 180px;
-	  }
-	  .social-links {
-		margin:15px 0 20px auto !important;
-	  }
-	  .common-space {
+	}
+
+	.social-links {
+		margin: 15px 0 20px auto !important;
+	}
+
+	.common-space {
 		padding-bottom: 45px;
-	  }
+	}
 }
 
 @media screen and (max-width:475px) {
@@ -1081,14 +1252,16 @@ right: -18px;
 	.veiw-btn {
 		font-size: 14px;
 	}
+
 	.product-cont h4 {
 		font-size: 20px;
 		margin-bottom: 5px;
-	  }
-	  .product-cont {
+	}
+
+	.product-cont {
 		margin-bottom: 25px;
-	  }
-	
+	}
+
 }
 
 @media screen and (max-width:425px) {
@@ -1145,14 +1318,17 @@ right: -18px;
 		gap: 10px;
 		margin-top: 25px;
 	}
+
 	.product-cont h4 {
 		font-size: 18px;
 		margin-top: 10px;
-	  }
-	  .cta-cont h2 {
+	}
+
+	.cta-cont h2 {
 		font-size: 20px;
-	  }
-	  .secodary-btn {
-		padding:12px;
-	  }
+	}
+
+	.secodary-btn {
+		padding: 12px;
+	}
 }

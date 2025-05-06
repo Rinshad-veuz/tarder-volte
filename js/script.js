@@ -39,6 +39,9 @@ AOS.init({ disable: 'mobile' });
 // }
 
 
+
+
+
 $('.client-carousel').owlCarousel({
 
     loop: true,
@@ -66,6 +69,33 @@ $('.client-carousel').owlCarousel({
         }
     }
 })
+$('.history-carousel').owlCarousel({
+
+    loop: true,
+    margin: 15,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 1000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        375: {
+            items: 2
+        },
+        600: {
+            items:2
+        },
+       
+        1300: {
+            items: 3
+        }
+    }
+})
+
+
 
 $('.download-carousel').owlCarousel({
 
@@ -120,6 +150,29 @@ $('.news-carousel').owlCarousel({
         }
     }
 })
+
+
+
+
+// nav scroll effect
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.custom-nav');
+    const scrollThreshold = 50; // How many pixels to scroll before effect activates
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > scrollThreshold) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Initialize on load in case page starts scrolled
+    if (window.scrollY > scrollThreshold) {
+        navbar.classList.add('scrolled');
+    }
+});
+// nav scroll effect
 
 // scroller-smooth
 const lenis = new Lenis()
