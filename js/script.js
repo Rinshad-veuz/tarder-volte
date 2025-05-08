@@ -74,21 +74,24 @@ $('.history-carousel').owlCarousel({
     loop: true,
     margin: 15,
     nav: false,
-    dots: true,
+    dots: false,
     autoplay: true,
     autoplayTimeout: 1000,
     autoplayHoverPause: true,
     responsive: {
         0: {
-            items: 1
-        },
-        375: {
             items: 2
         },
-        600: {
-            items:2
-        },
        
+       600: {
+            items:3
+        },
+        992: {
+            items:4
+        },
+        1200: {
+            items: 3
+        },
         1300: {
             items: 3
         }

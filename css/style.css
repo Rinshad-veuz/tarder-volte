@@ -576,6 +576,10 @@ right: -18px;
 
 
 /* footer */
+.footer{
+	border-top: solid 1.5px #eee;
+  padding-top: 50px;
+}
 .footer-logo img {
 	width: 240px;
 	margin-bottom: 20px;
@@ -701,15 +705,16 @@ right: -18px;
 
 .about-img img {
 	width: 100%;
-	/* height: 500px; */
-	object-fit: contain;
-	border-radius: 20px;
-}
+	height: 470px;
+	object-fit: cover;
+	border-radius:20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
 
 .abt-title {
-	font-size: 50px;
-	font-weight: bold;
-	display: inline-block;
+	font-size: 38px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 .owl-carousel {
@@ -722,13 +727,14 @@ right: -18px;
 
 .history-carousel .client-card img {
 	width: 150px !important;
+	margin: 0 auto;
 }
 
 .about-sec {
-	margin-top: 30px !important;
+	/* margin-top: 30px !important; */
 }
 
-.launch-bg{
+.launch-bg {
 	background-image: url(../img/detail-page/abt2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -738,12 +744,13 @@ right: -18px;
 	background-blend-mode: overlay;
 	background-color: #0e0e0ed8;
 }
+
 .launch-card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 40px 60px;
-	text-align: center;
+	text-align: justify;
 	border-radius:
 		25px 10px 10px 10px;
 	border:
@@ -753,22 +760,412 @@ right: -18px;
 	backdrop-filter: blur(10px);
 	height: 100%;
 }
-.launch-card h3{
+
+.launch-card h3 {
 	color: #fff;
-	font-size: 32px;
+	font-size: 28px;
 	font-weight: 600;
 	margin-bottom: 20px;
+	text-align: center;
+	/* text-transform: uppercase; */
 }
-.launch-card p{
+.launch-card h4{
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.launch-card p {
 	color: #fff;
 }
 
 .launch-card img {
-	width: 130px;
+	width: 110px;
 }
 
+.community-img {
+	height: 400px;
+	position: relative;
+}
+
+.community-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+.rotate-logo {
+	position: absolute;
+	right: -52px;
+	top: 50%;
+	transform: translateY(-50px);
+	background-color: var(--bg-color);
+	border: solid 1px var(--btn-color);
+	border-radius: 50%;
+	padding: 10px;
+	width: 80px;
+	height: 80px;
+	z-index: 990;
+
+	/* Rotation animation */
+	animation: rotate360 4s linear infinite;
+}
+.rotate-logo img{
+	background-color: #fff;
+	box-shadow: none !important;
+}
+
+/* Keyframes for rotation */
+@keyframes rotate360 {
+	from {
+		transform: translateY(-50px) rotate(0deg);
+	}
+	to {
+		transform: translateY(-50px) rotate(360deg);
+	}
+}
+
+
+.rotate-logo img {
+
+	object-fit: contain;
+}
+
+.community-sec h3{
+color: #000;
+font-size: 38px;
+margin-top: 30px;
+}
+.community-sec h3 a{
+	color: #C9982C;
+}
 /* about page end */
 /* footer */
+
+/* product page */
+
+.product-sec .about-img img{
+border-radius: 20px;
+}
+.product-sec .about-cont h2{
+	font-size: 42px;
+	font-weight: 700;
+	}
+	.about-cont h3{
+		font-size: 26px;
+		color: #c9982c;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	.product-detail-list{
+		align-items: center;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		background-color: rgba(255, 255, 255, 0.8) !important;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.27);
+		padding: 20px 30px;
+		border-radius: 15px;
+		margin-top: 30px;
+	  }
+	  .product-trading-img{
+		width: 100%;
+		height: 350px;
+		border-radius: 15px;
+	  }
+	  .product-trading-img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 13px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	  }
+	  .product-trading-cont h3{
+		color: #000;
+  font-size: 28px;
+  font-weight: 600;
+	  }
+	  .product-trading-cont p{
+		margin-bottom: 10px;
+	  }
+	  .trader-btn-logo{
+		display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+.trader-btn-logo img{
+	width: 300px;
+}
+.trade-img img{
+object-fit: contain;
+}
+.product-trading-video{
+	display: flex;
+	gap: 10px;
+	/* margin-top: 30px; */
+}
+.product-trading-video video{
+width: 100%;
+border-radius: 20px;
+}
+.product-trading-video-tags h4{
+	font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  padding: 30px 15px;
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: var(--btn-color);
+}
+.trader-btn-logo-custom{
+	flex-direction: row;
+	justify-content: center;
+}
+.launch-card-custom{
+	align-items: start;
+	text-align: initial;
+}
+.launch-card-custom p{
+	margin-bottom: 10px;
+}
+.video-sec{
+	margin-top: 30px !important;
+}
+
+.mql-box{
+	border: solid 2px #c9982c;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+}
+.mql-box img{
+	width: 75px !important;
+	margin-bottom: 10px;
+}
+.mql-box h6{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+}
+.traderbrokers-bg{
+background-color: #000;
+background-image: none !important;
+}
+.traderbrokers-sec {
+    border-radius: 30px;
+    padding: 80px 60px;
+	background-color: #1a1a1a;
+	border: 1px solid #ffffff1a;
+	border-radius: 24px;
+	width: 100%;
+	box-shadow: 0 16px 32px #0000003d;
+	color: #fff;
+}
+.traderbrokers-sec h3{
+	color: var(--btn-color);
+	font-size: 32px;
+	font-weight: 600;
+}
+.traderbrokers-sec h4{
+	color:#fff;
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.traderbrokers-sec p{
+	color:#fff;
+	margin-bottom: 8px;
+}
+.enhanced-trading .community-img img{
+	object-fit: contain;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.product-trading-cont h4{
+	font-size: 24px;
+	color: var(--btn-color);
+}
+.gif-sec{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.meta-trader-list h4{
+font-size: 36px;
+font-weight: 600;
+color: var(--btn-color);
+text-align: center;
+margin-bottom: 30px;
+}
+.benafits-head{
+	display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+.benafits-head img{
+	width: 60px !important;
+}
+.benafits-head h4{
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--btn-color);
+}
+.mql-box p{
+	font-size: 16px;
+	margin: 0;
+}
+.advantages{
+	padding: 30px;
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 16px 32px #0000003d;
+  color: #fff;
+
+}
+.advantages h4{
+	color: var(--btn-color);
+	font-size: 24px;
+	font-weight: 600;
+	
+}
+.advantages p{
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.additional-security-card{
+	background-color: var(--btn-color);
+	padding: 30px;
+	height: 100%;
+}
+.additional-security-card h5{
+	color: #fff;
+	font-size: 26px;
+	font-weight: 600;
+}
+.additional-security-card ul li{
+color:#fff;
+padding-left: 20px;
+position: relative;
+font-size: 16px;
+}
+.additional-security-card p{
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.additional-security-card ul li::before{
+	position: absolute;
+	content: "↳";
+  color: #fff;
+  font-size:18px;
+  left: 0;
+}
+.pricing-card{
+	width: 100%;
+	padding: 30px;
+	border-radius: 15px;
+	margin-top: 30px;
+	color: var(--btn-color);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.8) !important;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.pricing-card h5{
+	font-size: 18px;
+	font-weight: 300;
+}
+.pricing-card h3{
+	font-size: 28px;
+	font-weight: 700;
+	margin-top: 40px;
+}
+
+.pricing-card h4{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+.team-wox-mql-box p b{
+	color: var(--btn-color);
+}
+ p a{
+	color: var(--btn-color);
+	font-style: italic;
+}
+
+
+/* services page */
+.mql-logo img{
+width: 200px !important;
+}
+.virtual-hosting-list{
+	margin-bottom: 10px !important;
+}
+.virtual-hosting-list li{
+	color:#fff;
+	font-size: 16px;
+	font-weight: 500;
+	position: relative;
+	padding-left: 20px;
+}
+.virtual-hosting-list li::before{
+position: absolute;
+  content: "↳";
+  color: var(--btn-color);
+  font-size: 18px;
+  font-weight: 600;
+  left: 0;
+}
+.virtual-hosting-list-white li{
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+/* news and media */
+
+.news-media-sec .news-media-img img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover 
+	!important;
+	object-position: center;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	margin-bottom: 25px;
+}
+.news-media-sec .news-media-cont h4{
+font-size: 26px;
+font-weight: 600;
+color: var(--btn-color);
+}
+.news-media-sec .news-media-cont .date{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.news-media-sec .news-media-cont .date span{
+	color: #000;
+	font-size: 16px;
+	font-weight: 600;
+}
+.news-media-sec .news-media-cont .date img{
+	width: 20px;
+}
+
 @media screen and (max-width:1800px) {
 	.custom-container {
 		max-width: 1500px;
@@ -829,6 +1226,33 @@ right: -18px;
 	.news-carousel .client-card img {
 		height: 170px;
 	}
+	.launch-card img {
+		width: 100px;
+	  }
+	  .launch-card h3 {
+		font-size: 24px;
+		margin-bottom: 15px;
+	  }
+	  .launch-card {
+		padding:35px;
+	  }
+	  .community-img {
+		height: 350px;
+	  }
+	  .product-trading-video-tags h4 {
+		padding: 20px 15px;
+	  }
+	  .mql-box h6 {
+		font-size: 17px;
+	  }
+	  .launch-card h4 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	  }
+	  .benafits-head img {
+		width: 50px !important;
+	  }
+	  
 }
 
 @media screen and (max-width:1200px) {
@@ -911,7 +1335,62 @@ right: -18px;
 	.secondary-banner-cont p {
 		font-size: 18px;
 	}
+	.history-carousel{
+		margin-bottom: 20px;
+	}
+	.launch-card p {
+		font-size: 15px;
+	  }
+	  .community-img {
+		height: 270px;
+	  }
+	  .community-sec h3 {
+		font-size: 34px;
+	  }
+	  .community-sec h3 br{
+		display: none;
+	  }
+	  .about-img img {
+		height: 430px;
+	  }
+	  .product-sec .about-cont h2 {
+		font-size: 36px;
+	  }
+	  .product-trading-cont h3{
+		font-size: 25px;
+	  }
+	  .product-trading-cont p{
+		font-size: 15px;
+	  }
+	  .product-trading-img {
+		height: 295px;
+	  }
+	  .trader-btn-logo img {
+		width: 270px;
+	  }
+	  .product-trading-video {
+		flex-direction: column;
+	  }
+	  .trader-btn-logo-custom {
+		flex-direction: column;
+	  }
+	  .traderbrokers-sec {
+		padding: 50px;
+	  }
+	  .product-trading-cont h4 {
+		font-size: 20px;
+	  }
+	  .benafits-head h4 {
+		font-size: 22px;
+	  }
+	  .mql-box p {
+		font-size: 15px;
+	  }
+	  .advantages h4 {
+		font-size: 22px;
+	  }
 }
+
 
 @media screen and (max-width:1024px) {
 	.primary-button {
@@ -1024,13 +1503,83 @@ right: -18px;
 	}
 
 	.common-space {
-		padding-bottom: 70px;
+		padding-bottom: 55px;
 	}
 
 	.secondary-banner {
 		height: 350px;
 
 	}
+	.abt-title {
+		font-size: 34px;
+	  }
+	  .about-img img {
+		height: 350px;
+	  }
+	  .launch-card {
+		height: auto;
+		margin-bottom: 20px;
+	  }
+	  .launch-bg {
+		padding:40px 0;
+}
+.rotate-logo {
+	right: -45px;
+	width: 70px;
+	height: 70px;
+  }
+  .community-sec h3 {
+    font-size: 28px;
+  }
+  .product-sec .about-cont h2 {
+    font-size: 30px;
+    margin: 20px 0 10px;
+  }
+  .product-sec .about-cont h2 br{
+	display: none;
+  }
+  .product-trading-cont h3 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .trade-img-order{
+	order: -1;
+  }
+  .about-cont h3 {
+	font-size: 24px;
+  }
+  .trader-btn-logo-custom {
+    flex-direction: row;
+  }
+  .product-trading-video-tags{
+	margin-top: 20px;
+  }
+  .launch-card h4 {
+    margin-bottom: 10px;
+  }
+  .traderbrokers-sec h3 {
+	font-size: 28px;
+  }
+  .traderbrokers-sec h4 {
+	font-size: 24px;
+	margin-bottom: 15px;
+  }
+  .meta-trader-list h4 {
+	font-size: 30px;
+	margin-bottom: 20px;
+  }
+  .pricing-card h3 {
+	margin-top: 25px;
+  }
+  .pricing-card h4 {
+	margin-bottom: 20px;
+  }
+  .mql-logo img {
+	width: 170px !important;
+  }
+  .footer {
+	padding-top: 40px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -1135,6 +1684,46 @@ right: -18px;
 	.common-space {
 		padding-bottom: 50px;
 	}
+	.abt-title {
+		font-size: 30px;
+	  }
+	  .about-img img {
+		height: auto;
+	  }
+	  .community-img {
+		height: 200px;
+	  }
+	  .rotate-logo {
+		right: -30px;
+		width: 50px;
+		height: 50px;
+		top: 65%;
+	  }
+	  .trader-btn-logo img {
+		width: 220px;
+	  }
+	  .about-cont h3 {
+		font-size: 22px;
+		margin-bottom: 7px;
+	  }
+	  .trade-img img{
+height: 350px;
+	  }
+	  .mql-box {
+		border: solid 1px #c9982c;
+	  }
+	  .mql-box h6 {
+		font-size: 16px;
+	  }
+	  .traderbrokers-sec h4 {
+		font-size: 20px;
+	  }
+	  .traderbrokers-sec h3 {
+		font-size: 25px;
+	  }
+	  .mql-logo img {
+		width: 155px !important;
+	  }
 }
 
 @media screen and (max-width:600px) {
@@ -1199,6 +1788,63 @@ right: -18px;
 	.common-space {
 		padding-bottom: 45px;
 	}
+	.abt-title {
+		font-size: 26px;
+	  }
+	  .launch-card {
+		padding:
+	25px;
+	  }
+	  .launch-card img {
+		width: 90px;
+	  }
+	  .launch-card h3 {
+		font-size: 20px;
+	  }
+	  .community-img {
+		height: 180px;
+	  }
+	  .product-sec .about-cont h2 {
+		font-size: 26px;
+	  }
+	  .product-trading-img {
+		height: auto;
+	  }
+	  .product-trading-cont p {
+		font-size: 14px;
+	  }
+	  .product-detail-list {
+		padding: 15px;
+	  }
+	  .about-cont h3 {
+		font-size: 21px;
+	  }
+	  .trader-btn-logo-custom {
+		flex-direction: column;
+		gap: 10px;
+	  }
+	  .trade-img img {
+		height: 300px;
+	  }
+	  .launch-card h4 {
+		margin-bottom: 10px;
+		font-size: 18px;
+	  }
+	  .traderbrokers-sec {
+		padding:20px;
+	  }
+	  .meta-trader-list h4 {
+		font-size: 26px;
+	  }
+	  .advantages h4 {
+		font-size: 20px;
+	  }
+	  .virtual-hosting-list li {
+		font-size: 15px;
+	  }
+	  .virtual-hosting-list li::before {
+		font-size: 16px;
+	  }
 }
 
 @media screen and (max-width:475px) {
@@ -1261,7 +1907,31 @@ right: -18px;
 	.product-cont {
 		margin-bottom: 25px;
 	}
-
+	.history-carousel .client-card img {
+		width: 120px !important;
+	}
+	.community-sec h3 {
+		font-size: 24px;
+		margin-top: 15px;
+	  }
+	  .trader-btn-logo img {
+		width: 200px;
+	  }
+	  .product-trading-video-tags h4 {
+		font-size: 14px;
+	  }
+	  .traderbrokers-sec h3 {
+		font-size: 22px;
+	  }
+	  .traderbrokers-sec h4 {
+		font-size: 18px;
+	  }
+	  .product-trading-cont h4 {
+		font-size: 18px;
+	  }
+	  .mql-logo img {
+		width: 140px !important;
+	  }
 }
 
 @media screen and (max-width:425px) {
@@ -1331,4 +2001,60 @@ right: -18px;
 	.secodary-btn {
 		padding: 12px;
 	}
+	.abt-title {
+		font-size: 21px;
+	  }
+	  .launch-card h3 {
+		font-size: 18px;
+	  }
+	  .launch-card p {
+		font-size: 14px;
+	  }
+	  .community-img {
+		height: 150px;
+	  }
+	  .community-sec h3 {
+		font-size: 22px;
+	  }
+	  .product-sec .about-cont h2 {
+		font-size: 22px;
+		margin: 15px 0 5px;
+	  }
+	  .about-cont h3 {
+		font-size: 18px;
+	  }
+	  .trade-img img {
+		height: 260px;
+	  }
+	  .meta-trader-list h4 {
+		font-size: 23px;
+	  }
+	  .benafits-head img {
+		width: 45px !important;
+	  }
+	  .advantages h4 {
+		font-size: 18px;
+	  }
+	  .additional-security-card p {
+		font-size: 15px;
+	  }
+	  .additional-security-card ul li {
+		font-size: 15px;
+		padding-left: 15px;
+	  }
+	  .additional-security-card ul li::before {
+		font-size: 16px;
+	  }
+	  .additional-security-card h5 {
+		font-weight: 600;
+	  }
+	  .mql-logo img {
+		width: 130px !important;
+	  }
+	  .footer {
+		padding-top: 30px;
+	  }
+	  .traderbrokers-sec h3 {
+		font-size: 20px;
+	  }
 }
